@@ -68,9 +68,9 @@ def app():
 
     if st.button("Begin"):
         # Load the Iris dataset
-        mushroom = datasets.load_mushroom()
-        X = mushroom.data  # Features
-        y = mushroom.target  # Target labels (edibility)
+        mushroom = pd.read_csv('mushroom.csv')
+        X = mushroom[['cap-diameter', 'stem-height', 'stem-width', 'Body Mass (g)']] # Features 
+        y = mushroom['class']  # Target labels (edibility)
 
         # KNN for supervised classification (reference for comparison)
 
@@ -97,7 +97,7 @@ def app():
         for label, color in zip(unique_labels, colors):
             indices = y_pred == label
             # Use ax.scatter for consistent plotting on the created axis
-            ax.scatter(X[indices, 0], X[indices, 1], label=iris.target_names[label], c=color)
+            ax.scatter(X[indices, 'cap-diameter'], X[indices, 'stem-height'], label=label, c=color)
 
         # Add labels and title using ax methods
         ax.set_xlabel('Cap Diameter (cm)')
