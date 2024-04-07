@@ -40,8 +40,9 @@ def app():
     if st.button("Begin"):
         # Load the Iris dataset
         mushroom = pd.read_csv('mushroom.csv')
-        X = iris.data  # Features
-        y = iris.target  # Target labels (species)
+        X = mushroom[['cap-diameter', 'stem-height', 'stem-width']] # Features 
+        y = mushroom['class']  # Target labels (edibility)
+
 
         # Define the K-means model with 3 clusters (known number of species)
         kmeans = KMeans(n_clusters=3, random_state=0, n_init=10)
@@ -92,7 +93,7 @@ def app():
         for label, color in zip(unique_labels, colors):
             indices = y_pred == label
             # Use ax.scatter for consistent plotting on the created axis
-            ax.scatter(X[indices, 0], X[indices, 1], label=iris.target_names[label], c=color)
+            ax.scatter(X.loc[indices, 'cap-diameter'], X.loc[indices, 'stem-height'], label=label, c=color)
 
         # Add labels and title using ax methods
         ax.set_xlabel('Sepal length (cm)')
