@@ -86,8 +86,8 @@ def app():
 
         # Define mapping from cluster labels to edibility categories
         label_to_edibility = {
-            0: 'edible',
-            1: 'poisonous'
+            0: 'poisonous',
+            1: 'edible'
         }
 
         # Get unique class labels and color map
