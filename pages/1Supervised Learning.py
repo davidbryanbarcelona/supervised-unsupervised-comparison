@@ -69,7 +69,7 @@ def app():
     if st.button("Begin"):
         # Load the Iris dataset
         mushroom = pd.read_csv('mushroom.csv')
-        X = mushroom[['cap-diameter', 'stem-height', 'stem-width', 'Body Mass (g)']] # Features 
+        X = mushroom[['cap-diameter', 'stem-height', 'stem-width']] # Features 
         y = mushroom['class']  # Target labels (edibility)
 
         # KNN for supervised classification (reference for comparison)
