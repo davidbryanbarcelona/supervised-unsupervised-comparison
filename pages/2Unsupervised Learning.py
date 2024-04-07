@@ -1,4 +1,4 @@
-b#Input the relevant libraries
+#Input the relevant libraries
 import numpy as np
 import pandas as pd
 import streamlit as st
