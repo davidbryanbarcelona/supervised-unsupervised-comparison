@@ -66,7 +66,7 @@ def app():
         value=5,  # Initial value
     )
 
-    if st.button("Start"):
+    if st.button("Begin"):
         # Load the Iris dataset
         mushroom = datasets.load_mushroom()
         X = mushroom.data  # Features
