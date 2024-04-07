@@ -84,6 +84,12 @@ def app():
         # Get predicted cluster labels
         y_pred = kmeans.predict(X)
 
+        # Define mapping from cluster labels to edibility categories
+        label_to_edibility = {
+            0: 'poisonous,
+            1: 'edible'
+        }
+
         # Get unique class labels and color map
         unique_labels = list(set(y_pred))
         colors = plt.cm.get_cmap('viridis')(np.linspace(0, 1, len(unique_labels)))
@@ -93,7 +99,7 @@ def app():
         for label, color in zip(unique_labels, colors):
             indices = y_pred == label
             # Use ax.scatter for consistent plotting on the created axis
-            ax.scatter(X.loc[indices, 'cap-diameter'], X.loc[indices, 'stem-height'], label=label, c=color)
+            ax.scatter(X.loc[indices, 'cap-diameter'], X.loc[indices, 'stem-height'], label=label_to_edibility[label], c=color)
 
         # Add labels and title using ax methods
         ax.set_xlabel('Sepal length (cm)')
