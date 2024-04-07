@@ -97,7 +97,7 @@ def app():
         for label, color in zip(unique_labels, colors):
             indices = y_pred == label
             # Use ax.scatter for consistent plotting on the created axis
-            ax.scatter(X[indices, 'cap-diameter'], X[indices, 'stem-height'], label=label, c=color)
+            ax.scatter(X.loc[indices, 'cap-diameter'], X.loc[indices, 'stem-height'], label=label, c=color)
 
         # Add labels and title using ax methods
         ax.set_xlabel('Cap Diameter (cm)')
