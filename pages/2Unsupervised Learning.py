@@ -44,8 +44,8 @@ def app():
         y = mushroom['class']  # Target labels (edibility)
 
 
-        # Define the K-means model with 3 clusters (known number of species)
-        kmeans = KMeans(n_clusters=3, random_state=0, n_init=10)
+        # Define the K-means model with 2 clusters (edibility)
+        kmeans = KMeans(n_clusters=2, random_state=0, n_init=10)
 
         # Train the K-means model
         kmeans.fit(X)
