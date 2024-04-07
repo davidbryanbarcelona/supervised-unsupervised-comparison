@@ -45,7 +45,7 @@ def app():
 
 
         # Define the K-means model with 2 clusters (edibility)
-        kmeans = KMeans(n_clusters=2, random_state=10, n_init=10)
+        kmeans = KMeans(n_clusters=2, random_state=0, n_init=10)
 
         # Train the K-means model
         kmeans.fit(X)
