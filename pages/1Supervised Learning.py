@@ -26,10 +26,11 @@ def app():
     point based on its features.
     \n**K-Nearest Neighbors (KNN):**
     KNN is a simple yet powerful algorithm for both classification and regression tasks. 
-    \n**The Iris Dataset:**
-    The Iris dataset is a popular benchmark dataset in machine learning. It contains information about 150 
-    iris flowers from three different species: Iris Setosa, Iris Versicolor, and Iris Virginica. 
-    Each flower is described by four features:
+    \n**The Mushroom Dataset:**
+    This dataset includes descriptions of hypothetical samples corresponding to 23 species
+    of gilled mushrooms in the Agaricus and Lepiota Family Mushroom drawn from The Audubon 
+    Society Field Guide to North American Mushrooms (1981). It contains 200 sample of each species 
+    that is identified as edible or poisonous. 
     * Sepal length (cm)
     * Sepal width (cm)
     * Petal length (cm)
