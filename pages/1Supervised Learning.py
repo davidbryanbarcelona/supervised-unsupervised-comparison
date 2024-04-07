@@ -27,25 +27,28 @@ def app():
     \n**K-Nearest Neighbors (KNN):**
     KNN is a simple yet powerful algorithm for both classification and regression tasks. 
     \n**The Mushroom Dataset:**
-    This dataset includes descriptions of hypothetical samples corresponding to 23 species
-    of gilled mushrooms in the Agaricus and Lepiota Family Mushroom drawn from The Audubon 
-    Society Field Guide to North American Mushrooms (1981). It contains 200 sample of each species 
-    that is identified as edible or poisonous. 
-    * Sepal length (cm)
-    * Sepal width (cm)
-    * Petal length (cm)
-    * Petal width (cm)
-    \n**KNN Classification with Iris:**
+    This dataset includes descriptions of hypothetical samples corresponding to 23 species of 
+    gilled mushrooms in the Agaricus and Lepiota Family Mushroom, drawn from The Audubon Society 
+    Field Guide to North American Mushrooms (1981). It contains 200 samples of mushrooms which are 
+    identified as either edible or poisonous.\n
+    Each mushrooms have the following features
+    * Cap Diameter (cm)
+    * Cap Shape
+    * Cap Surface
+    * Stem Height (cm)
+    * Stem width (cm)
+    * etc.
+    \n**KNN Classification with Mushroom Edibility:**
     \n1. **Training:**
     * The KNN algorithm stores the entire Iris dataset (features and labels) as its training data.
     \n2. **Prediction:**
-    * When presented with a new iris flower (unknown species), KNN calculates the distance (often Euclidean distance) 
-    between this flower's features and all the flowers in the training data.
+    * When presented with a new mushroom (unseen data), KNN calculates the distance (often Euclidean distance) 
+    between this mushroom's features and all the mushrooms in the training data.
     * The user defines the value of 'k' (number of nearest neighbors). KNN identifies the 'k' closest 
-    data points (flowers) in the training set to the new flower.
-    * KNN predicts the class label (species) for the new flower based on the majority vote among its 
-    'k' nearest neighbors. For example, if three out of the five nearest neighbors belong to Iris Setosa, 
-    the new flower is classified as Iris Setosa.
+    data points (mushrooms) in the training set to the new mushroom.
+    * KNN predicts the class label (edibility) for the new mushroom based on the majority vote among its 
+    'k' nearest neighbors. For example, if three out of the five nearest neighbors belong to edible, 
+    the mushroom is classified as edible.
     **Choosing 'k':**
     The value of 'k' significantly impacts KNN performance. A small 'k' value might lead to overfitting, where the 
     model performs well on the training data but poorly on unseen data. Conversely, a large 'k' value might not 
