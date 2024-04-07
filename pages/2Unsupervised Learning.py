@@ -1,4 +1,4 @@
-#Input the relevant libraries
+b#Input the relevant libraries
 import numpy as np
 import pandas as pd
 import streamlit as st
@@ -86,8 +86,8 @@ def app():
 
         # Define mapping from cluster labels to edibility categories
         label_to_edibility = {
-            0: 'poisonous',
-            1: 'edible'
+            0: 'edible',
+            1: 'poisonous'
         }
 
         # Get unique class labels and color map
@@ -102,9 +102,9 @@ def app():
             ax.scatter(X.loc[indices, 'cap-diameter'], X.loc[indices, 'stem-height'], label=label_to_edibility[label], c=color)
 
         # Add labels and title using ax methods
-        ax.set_xlabel('Sepal length (cm)')
-        ax.set_ylabel('Sepal width (cm)')
-        ax.set_title('Sepal Length vs Width Colored by Predicted Iris Species')
+        ax.set_xlabel('Cap Diameter (cm)')
+        ax.set_ylabel('Stem Height (cm)')
+        ax.set_title('Cap Diameter vs Stem Height by Predicted Mushroom Edibility')
 
         # Add legend and grid using ax methods
         ax.legend()
