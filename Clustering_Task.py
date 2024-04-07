@@ -18,16 +18,7 @@ def app():
     \nThis data app allows users to compare the performance of supervised learning (KNN) and unsupervised 
     learning (K-Means) gorithms for clustering tasks. 
     \nOnce configured, users can initiate the analysis. The app will run the KNN and K-Means algorithms on 
-    the iris dataset.
-    \n**Visualization and Comparison:**
-    * The app will present the clustering results visually.
-    * Scatter plots with data points colored by their assigned cluster for both KNN and K-Means.
-    * Silhouette analysis to compare the quality of clusters for K-Means.
-    * Users can compare the visual representations of the clusters formed by each algorithm.
-    \n**Performance Metrics (Optional):**
-    *\nThe app includes basic performance metrics relevant to the chosen algorithms:
-    * For KNN (classification task): Accuracy, precision, recall, F1-score (assuming labeled data is available for evaluation).
-    * For K-Means (unsupervised task): Silhouette score (measures cluster separation)."""
+    the mushroom dataset.
     st.write(text)
     
 #run the app
