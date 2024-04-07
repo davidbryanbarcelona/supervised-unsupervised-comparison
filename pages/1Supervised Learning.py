@@ -66,7 +66,7 @@ def app():
         value=5,  # Initial value
     )
 
-    if st.button("Begin"):
+    if st.button("Start"):
         # Load the Iris dataset
         mushroom = pd.read_csv('mushroom.csv')
         X = mushroom[['cap-diameter', 'stem-height', 'stem-width']] # Features 
