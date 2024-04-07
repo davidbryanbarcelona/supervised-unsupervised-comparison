@@ -18,7 +18,7 @@ def app():
     \nThis data app allows users to compare the performance of supervised learning (KNN) and unsupervised 
     learning (K-Means) gorithms for clustering tasks. 
     \nOnce configured, users can initiate the analysis. The app will run the KNN and K-Means algorithms on 
-    the mushroom dataset.
+    the mushroom dataset."""
     st.write(text)
     
 #run the app
