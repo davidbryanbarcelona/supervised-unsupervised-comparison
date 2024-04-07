@@ -66,11 +66,11 @@ def app():
         value=5,  # Initial value
     )
 
-    if st.button("Begin"):
+    if st.button("Start"):
         # Load the Iris dataset
-        iris = datasets.load_iris()
-        X = iris.data  # Features
-        y = iris.target  # Target labels (species)
+        mushroom = datasets.load_mushroom()
+        X = mushroom.data  # Features
+        y = mushroom.target  # Target labels (edibility)
 
         # KNN for supervised classification (reference for comparison)
 
@@ -100,9 +100,9 @@ def app():
             ax.scatter(X[indices, 0], X[indices, 1], label=iris.target_names[label], c=color)
 
         # Add labels and title using ax methods
-        ax.set_xlabel('Sepal length (cm)')
-        ax.set_ylabel('Sepal width (cm)')
-        ax.set_title('Sepal Length vs Width Colored by Predicted Iris Species')
+        ax.set_xlabel('Cap Diameter (cm)')
+        ax.set_ylabel('Stem Height (cm)')
+        ax.set_title('Cap Diameter vs Stem Height by Predicted Mushroom Edibility')
 
         # Add legend and grid using ax methods
         ax.legend()
