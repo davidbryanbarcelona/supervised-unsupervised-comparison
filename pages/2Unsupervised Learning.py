@@ -76,8 +76,7 @@ def app():
         In this case, a Silhouette Score of 0.8819 suggests:
         * **Moderately separated clusters:** The data points within a cluster are somewhat closer to their centroid than to centroids of other clusters. There's some separation, but it's not perfect
         * **Potential for improvement:** You might consider exploring different numbers of clusters (k) or using different initialization methods for K-means to see if a better clustering solution can be achieved with a higher Silhouette Score (closer to 1).
-        * The mushroom dataset is relatively well-separated into edible and poisonous. A Silhouette Score above 0.5 might be achievable with an appropriate number of clusters (k=2) and good initialization.
-        * The optimal k can vary depending on the specific dataset and the desired level of granularity in the clustering."""
+        * The mushroom dataset is relatively well-separated into edible and poisonous."""
         with st.expander("Click here for more information."):\
             st.write(text)
             
