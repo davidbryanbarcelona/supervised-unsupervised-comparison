@@ -31,7 +31,7 @@ def app():
     gilled mushrooms in the Agaricus and Lepiota Family Mushroom, drawn from The Audubon Society 
     Field Guide to North American Mushrooms (1981). It contains 200 samples of mushrooms which are 
     identified as either edible or poisonous.\n
-    Each mushrooms have the following features
+    Each mushrooms have the following features:
     * Cap Diameter (cm)
     * Cap Shape
     * Cap Surface
