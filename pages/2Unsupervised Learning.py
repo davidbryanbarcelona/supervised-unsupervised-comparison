@@ -15,16 +15,15 @@ import time
 def app():
 
     st.subheader('K-means clustering applied to the Iris Dataset')
-    text = """This is a classic example of unsupervised learning task. The Iris dataset contains 
-    information about Iris flowers (sepal length, sepal width, petal length, petal width) but 
-    doesn't have labels indicating the flower species (Iris Setosa, Iris Versicolor, 
-    Iris Virginica). K-means doesn't use these labels during clustering.
+    text = """This is a classic example of unsupervised learning task. The mushroom dataset contains 
+    information about mushrooms (Cap Diameter, Cap Shape, Cap Surface, Stem Height, Stem width) but 
+    doesn't have labels indicating the mushroom's edibility. K-means doesn't use these labels during clustering.
     \n* **K-means Clustering:** The algorithm aims to group data points into a predefined 
     number of clusters (k). It iteratively assigns each data point to the nearest cluster 
     centroid (center) and recomputes the centroids based on the assigned points. This process 
     minimizes the within-cluster distances, creating groups with similar characteristics.
-    In essence, K-means helps uncover inherent groupings within the Iris data based on their 
-    features (measurements) without relying on predefined categories (flower species). 
+    In essence, K-means helps uncover inherent groupings within the mushroom data based on their 
+    features (measurements) without relying on predefined categories (edibility). 
     This allows us to explore how well the data separates into natural clusters, potentially 
     corresponding to the actual flower species.
     \n* Choosing the optimal number of clusters (k) is crucial. The "elbow method" 
@@ -40,7 +39,7 @@ def app():
 
     if st.button("Begin"):
         # Load the Iris dataset
-        iris = datasets.load_iris()
+        mushroom = pd.read_csv('mushroom.csv')
         X = iris.data  # Features
         y = iris.target  # Target labels (species)
 
